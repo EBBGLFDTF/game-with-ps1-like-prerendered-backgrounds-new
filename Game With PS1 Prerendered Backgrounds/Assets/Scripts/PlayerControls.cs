@@ -50,7 +50,7 @@ public class PlayerControls : MonoBehaviour
 		}
 		if (sKey == true)
 		{
-			controller.Move(turnDir * -walkSpeed);
+			controller.Move(turnDir * -walkSpeed * 0.5f);
 			Debug.Log("I moved backward");
 		}
 

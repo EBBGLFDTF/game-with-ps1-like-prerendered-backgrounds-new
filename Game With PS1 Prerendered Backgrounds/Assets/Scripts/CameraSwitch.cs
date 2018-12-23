@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CameraSwitch : MonoBehaviour
 {
-	public GameObject camera;
+	public GameObject cameraObj;
 
     // Start is called before the first frame update
     void Start()
@@ -20,6 +20,8 @@ public class CameraSwitch : MonoBehaviour
 
 	void OnCollisionEnter(Collision collision)
 	{
-
+		Camera cam = cameraObj.GetComponent<Camera>();
+		cam.enabled = false;
+		Debug.Log("camera disabled");
 	}
 }
